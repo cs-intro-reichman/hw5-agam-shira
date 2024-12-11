@@ -115,11 +115,11 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-      str1 = str1.toLowerCase(); // commitee
-      str2 = str2.toLowerCase(); // meet
+      str1 = str1.toLowerCase (); // commitee
+      str2 = str2.toLowerCase (); // meet
       for (int i = 0 ; i < str2.length() ; i++) {
         for (int j = 0 ; j < str1.length() ; j++) {
-            if ( str2.charAt(i) == str1.charAt(j)) { //
+            if ( str2.charAt(i) == str1.charAt(j)) { 
                 str1 = str1.substring(0, j) + str1.substring(j + 1);
                  break;
             }

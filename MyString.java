@@ -74,7 +74,7 @@ public class MyString {
      */
     public static String spacedString(String str) {
         if (str.length() == 0) {
-            return " ";
+            return "";
         } else {
             String spacedStr =  "" + str.charAt(0);
             for (int i = 1 ; i < str.length() ; i++) {

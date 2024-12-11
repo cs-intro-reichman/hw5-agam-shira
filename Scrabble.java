@@ -111,7 +111,20 @@ public class Scrabble {
 			String input = in.readString();
 			if (input.charAt(0) == '.') {
 				break;
-			}	
+			}
+			if (isWordInDictionary(input) && MyString.subsetOf(input, hand)) {
+				hand = MyString.remove(hand, input);
+				score += wordScore(input);
+				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points\n");
+			} else {
+				if (!MyString.subsetOf(input, hand)) {
+					System.out.println("Invalid word. Try again.");
+				} else {
+					if (!isWordInDictionary(input)) {
+						System.out.println("No such word in the dictionary. Try again.");
+					}
+				}
+			}
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
